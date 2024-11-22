@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Counter</title>
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-20 flex flex-col gap-10 justify-center items-center min-h-screen">
+    <div id="counter" class="text-5xl font-bold p-10">{{ . }}</div>
+    <div class="flex gap-6 items-center">
+        <button hx-target="#counter" hx-post="/decrease" class="bg-red-500 text-white font-semibold px-4 py-2">Decrease
+            -</button>
+
+        <button hx-target="#counter" hx-post="/increase" class="bg-blue-500 text-white font-semibold px-4 py-2">Increase
+            +</button>
+
+    </div>
+</body>
+
+</html>
